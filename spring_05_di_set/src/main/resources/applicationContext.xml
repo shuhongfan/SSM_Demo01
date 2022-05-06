@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--注入简单类型-->
+    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl">
+        <!--property标签：设置注入属性-->
+        <!--name属性：设置注入的属性名，实际是set方法对应的名称-->
+        <!--value属性：设置注入简单类型数据值-->
+        <property name="connectionNum" value="100"/>
+        <property name="databaseName" value="mysql"/>
+    </bean>
+
+    <bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl"/>
+
+    <!--注入引用类型-->
+    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl">
+        <!--property标签：设置注入属性-->
+        <!--name属性：设置注入的属性名，实际是set方法对应的名称-->
+        <!--ref属性：设置注入引用类型bean的id或name-->
+        <property name="bookDao" ref="bookDao"/>
+        <property name="userDao" ref="userDao"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--1.导入spring的坐标spring-context，对应版本是5.2.10.RELEASE-->
+
+    <!--2.配置bean-->
+    <!--bean标签标示配置bean
+    id属性标示给bean起名字
+    class属性表示给bean定义类型-->
+    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>
+
+    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl">
+        <!--7.配置server与dao的关系-->
+        <!--property标签表示配置当前bean的属性
+        name属性表示配置哪一个具体的属性
+        ref属性表示参照哪一个bean-->
+        <property name="bookDao" ref="bookDao"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.itheima.dao.impl.BookDaoImpl"/>
+    <!--autowire属性：开启自动装配，通常使用按类型装配-->
+    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl" autowire="byType"/>
+
+</beans>
