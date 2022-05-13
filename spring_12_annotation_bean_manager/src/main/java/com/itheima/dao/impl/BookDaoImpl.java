@@ -15,11 +15,16 @@ public class BookDaoImpl implements BookDao {
     public void save() {
         System.out.println("book dao save ...");
     }
+
+
+//    bean的声明周期
     //@PostConstruct设置bean的初始化方法
     @PostConstruct
     public void init() {
         System.out.println("init ...");
     }
+
+
     //@PreDestroy设置bean的销毁方法
     @PreDestroy
     public void destroy() {

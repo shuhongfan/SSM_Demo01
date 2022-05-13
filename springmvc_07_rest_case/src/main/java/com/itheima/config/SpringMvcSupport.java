@@ -4,6 +4,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
+/**
+ * 映射静态资源
+ */
 @Configuration
 public class SpringMvcSupport extends WebMvcConfigurationSupport {
     //设置静态资源访问过滤，当前类需要设置为配置类，并被扫描加载

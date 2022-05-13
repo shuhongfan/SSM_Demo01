@@ -12,7 +12,7 @@ public class MpConfig {
         //1.定义Mp拦截器
         MybatisPlusInterceptor mpInterceptor = new MybatisPlusInterceptor();
         //2.添加具体的拦截器
-        mpInterceptor.addInnerInterceptor(new PaginationInnerInterceptor());
+        mpInterceptor.addInnerInterceptor(new PaginationInnerInterceptor());  // 分页拦截器
         return mpInterceptor;
     }
 }

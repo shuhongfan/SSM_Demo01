@@ -16,7 +16,7 @@ public class UserController {
     }
 
     //设置当前请求方法为DELETE，表示REST风格中的删除操作
-    //@PathVariable注解用于设置路径变量（路径参数），要求路径上设置对应的占位符，并且占位符名称与方法形参名称相同
+    //@PathVariable注解用于设置【路径变量】（路径参数），要求路径上设置对应的占位符，并且占位符名称与方法形参名称相同
     @RequestMapping(value = "/users/{id}",method = RequestMethod.DELETE)
     @ResponseBody
     public String delete(@PathVariable Integer id){

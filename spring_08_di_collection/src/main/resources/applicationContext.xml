@@ -3,12 +3,14 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl">
+<!--        集合注入-->
         <!--数组注入-->
         <property name="array">
             <array>
                 <value>100</value>
                 <value>200</value>
                 <value>300</value>
+<!--                <ref bean=""/>-->
             </array>
         </property>
         <!--list集合注入-->

@@ -4,7 +4,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean class="com.itheima.dao.impl.BookDaoImpl"/>
+<!--    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>-->
+<!--    <bean id="bookDao2" class="com.itheima.dao.impl.BookDaoImpl"/>-->
+
     <!--autowire属性：开启自动装配，通常使用按类型装配-->
-    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl" autowire="byType"/>
+<!--    byName 使用setBookDao方法，去掉set的名称,
+          必须保障容器中具有指定名称的bean，因变量名与配置耦合，不推荐使用-->
+<!--    byType 必须保障容器中相同类型的bean唯一，推荐使用，-->
+<!--    自动装配优先级低于setter注入与构造器注入，同时出现时自动装配会失效-->
+    <bean id="bookService"
+          class="com.itheima.service.impl.BookServiceImpl"
+          autowire="byType"/>
 
 </beans>

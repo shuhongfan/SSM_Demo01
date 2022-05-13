@@ -18,6 +18,10 @@ public class JdbcConfig {
     @Value("${jdbc.password}")
     private String password;
 
+    /**
+     * 配置数据源
+     * @return
+     */
     @Bean
     public DataSource dataSource(){
         DruidDataSource dataSource = new DruidDataSource();
@@ -28,6 +32,11 @@ public class JdbcConfig {
         return dataSource;
     }
 
+    /**
+     * 平台事务管理器
+     * @param dataSource
+     * @return
+     */
     @Bean
     public PlatformTransactionManager transactionManager(DataSource dataSource){
         DataSourceTransactionManager ds = new DataSourceTransactionManager();

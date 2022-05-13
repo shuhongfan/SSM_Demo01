@@ -5,7 +5,9 @@
 
     <!--init-method：设置bean初始化生命周期回调函数-->
     <!--destroy-method：设置bean销毁生命周期回调函数，仅适用于单例对象-->
-    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl" init-method="init" destroy-method="destory"/>
+    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"
+          init-method="init"
+          destroy-method="destory"/>
 
     <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl">
         <property name="bookDao" ref="bookDao"/>

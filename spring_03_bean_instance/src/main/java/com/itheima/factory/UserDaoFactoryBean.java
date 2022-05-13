@@ -10,6 +10,19 @@ public class UserDaoFactoryBean implements FactoryBean<UserDao> {
         return new UserDaoImpl();
     }
 
+    /**
+     * 得到Bean是否是单例的
+     * @return
+     */
+    @Override
+    public boolean isSingleton() {
+        return true;
+    }
+
+    /**
+     * 得到的Bean的类型
+     * @return
+     */
     public Class<?> getObjectType() {
         return UserDao.class;
     }

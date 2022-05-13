@@ -10,9 +10,10 @@ public class AppForLifeCycle {
 
         BookDao bookDao = (BookDao) ctx.getBean("bookDao");
         bookDao.save();
+
         //注册关闭钩子函数，在虚拟机退出之前回调此函数，关闭容器
-        //ctx.registerShutdownHook();
+        ctx.registerShutdownHook();
         //关闭容器
-        ctx.close();
+//        ctx.close();
     }
 }

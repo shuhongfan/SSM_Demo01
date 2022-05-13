@@ -4,6 +4,8 @@
        xsi:schemaLocation="
             http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl" lazy-init="true"/>
+<!--    lazy-init="true"  延迟加载bean-->
+    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"
+          lazy-init="true"/>
 
 </beans>

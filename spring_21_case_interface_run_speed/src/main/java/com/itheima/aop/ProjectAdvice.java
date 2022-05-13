@@ -26,6 +26,7 @@ public class ProjectAdvice {
         for (int i = 0; i < 10000; i++) {
            pjp.proceed();
         }
+
         long end = System.currentTimeMillis();
         System.out.println("万次执行："+ className+"."+methodName+"---->" +(end-start) + "ms");
     }

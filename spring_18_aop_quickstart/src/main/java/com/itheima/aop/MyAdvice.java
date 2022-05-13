@@ -4,6 +4,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
+
 //通知类必须配置成Spring管理的bean
 @Component
 //设置当前类为切面类类
@@ -14,7 +15,7 @@ public class MyAdvice {
     private void pt(){}
 
     //设置在切入点pt()的前面运行当前操作（前置通知）
-    // @Before("pt()")
+     @Before("pt()")
     public void method(){
         System.out.println(System.currentTimeMillis());
     }

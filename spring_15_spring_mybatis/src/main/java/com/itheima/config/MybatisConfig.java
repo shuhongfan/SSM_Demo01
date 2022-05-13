@@ -8,6 +8,7 @@ import javax.sql.DataSource;
 
 public class MybatisConfig {
     //定义bean，SqlSessionFactoryBean，用于产生SqlSessionFactory对象
+//    扫描类型别名
     @Bean
     public SqlSessionFactoryBean sqlSessionFactory(DataSource dataSource){
         SqlSessionFactoryBean ssfb = new SqlSessionFactoryBean();
@@ -15,7 +16,10 @@ public class MybatisConfig {
         ssfb.setDataSource(dataSource);
         return ssfb;
     }
+
+
     //定义bean，返回MapperScannerConfigurer对象
+//    扫描映射
     @Bean
     public MapperScannerConfigurer mapperScannerConfigurer(){
         MapperScannerConfigurer msc = new MapperScannerConfigurer();

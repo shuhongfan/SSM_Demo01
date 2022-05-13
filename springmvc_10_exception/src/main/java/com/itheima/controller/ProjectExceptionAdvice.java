@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class ProjectExceptionAdvice {
     //@ExceptionHandler用于设置当前处理器类对应的异常类型
-    @ExceptionHandler(SystemException.class)
+    @ExceptionHandler(SystemException.class)  // 处理系统异常
     public Result doSystemException(SystemException ex){
         //记录日志
         //发送消息给运维
@@ -17,7 +17,7 @@ public class ProjectExceptionAdvice {
         return new Result(ex.getCode(),null,ex.getMessage());
     }
 
-    @ExceptionHandler(BusinessException.class)
+    @ExceptionHandler(BusinessException.class)  //处理业务异常
     public Result doBusinessException(BusinessException ex){
         return new Result(ex.getCode(),null,ex.getMessage());
     }

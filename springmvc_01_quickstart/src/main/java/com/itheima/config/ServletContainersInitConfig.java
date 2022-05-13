@@ -7,6 +7,12 @@ import org.springframework.web.servlet.support.AbstractDispatcherServletInitiali
 //web容器配置类
 public class ServletContainersInitConfig extends AbstractDispatcherServletInitializer {
     //加载springmvc配置类，产生springmvc容器（本质还是spring容器）
+
+    /**
+     * 创建servlet容器时，加载springMVC对应的bean并放入WebApplicationContext对象范围中，
+     * 而WebApplicationContext的作用范围为ServletContext范围，即整个web容器范围
+     * @return
+     */
     protected WebApplicationContext createServletApplicationContext() {
         //初始化WebApplicationContext对象
         AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
@@ -20,7 +26,7 @@ public class ServletContainersInitConfig extends AbstractDispatcherServletInitia
         return new String[]{"/"};
     }
 
-    //加载spring配置类
+    // 创建Servlet容器时需要加载非springMVC对应的bean
     protected WebApplicationContext createRootApplicationContext() {
         return null;
     }

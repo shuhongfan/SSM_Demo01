@@ -8,6 +8,7 @@
     <artifactId>maven_03_pojo</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
     <parent>
         <groupId>com.itheima</groupId>
         <artifactId>maven_01_parent</artifactId>

@@ -44,8 +44,8 @@ class Mybatisplus03DqlApplicationTests {
 //        userDao.selectBatchIds(list);
 
 
-        userDao.deleteById(2L);
-//        System.out.println(userDao.selectList(null));
+//        userDao.deleteById(2L);
+        System.out.println(userDao.selectList(null));
     }
 
     @Test

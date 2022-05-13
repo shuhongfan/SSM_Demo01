@@ -10,6 +10,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan({"com.itheima.service"})
 @PropertySource("classpath:jdbc.properties")
 @Import({JdbcConfig.class,MyBatisConfig.class})
-@EnableTransactionManagement
+@EnableTransactionManagement // 开启事务
 public class SpringConfig {
 }

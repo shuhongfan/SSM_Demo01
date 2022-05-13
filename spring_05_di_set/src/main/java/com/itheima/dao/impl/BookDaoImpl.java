@@ -6,6 +6,7 @@ public class BookDaoImpl implements BookDao {
 
     private String databaseName;
     private int connectionNum;
+
     //setter注入需要提供要注入对象的set方法
     public void setConnectionNum(int connectionNum) {
         this.connectionNum = connectionNum;
