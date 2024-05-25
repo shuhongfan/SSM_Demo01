@@ -988,7 +988,7 @@ public class AppForInstanceOrder {
 
 这就要用到Spring中的静态工厂实例化的知识了，具体实现步骤为:
 
-(1)在spring的配置文件application.properties中添加以下内容:
+(1)在spring的配置文件application.properties中添加以下内容: 应该是在applicationContext.xml中进行配置，这是比较老的old javaspringboot版本不需要新的来配置了
 
 ```xml
 <bean id="orderDao" class="com.itheima.factory.OrderDaoFactory" factory-method="getOrderDao"/>
